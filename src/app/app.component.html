@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-12">
       <app-recipes *ngIf="loadedFeature==='recipe';else shoppinglist"></app-recipes>
-      <ng-template #shoppinglist><app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list></ng-template>
+      <ng-template #shoppinglist><app-shopping-list ></app-shopping-list></ng-template>
     </div>
   </div>
 </div>
