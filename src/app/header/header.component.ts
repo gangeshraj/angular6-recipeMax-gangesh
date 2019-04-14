@@ -10,7 +10,7 @@ import { AuthService } from '../auth/auth.service';
 })
 export class HeaderComponent {
   constructor(private dataStorageService: DataStorageService,
-              private authService: AuthService) {
+    private authService: AuthService) {
   }
 
   onSaveData() {
@@ -28,5 +28,12 @@ export class HeaderComponent {
 
   onLogout() {
     this.authService.logout();
+  }
+
+  isAuthenticated = (paramter?: boolean) => {
+    if (paramter)
+      return this.authService.isAuthenticated();
+    else
+      return !this.authService.isAuthenticated();
   }
 }
