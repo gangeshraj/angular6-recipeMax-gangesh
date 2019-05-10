@@ -22,6 +22,8 @@ export class HeaderComponent {
       );
   }
 
+  isAuthenticated=()=>!this.authService.isAuthenticated();
+
   onFetchData() {
     this.dataStorageService.getRecipes();
   }
